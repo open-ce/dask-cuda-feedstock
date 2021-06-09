@@ -1,5 +1,5 @@
 {% set name = "dask-cuda" %}
-{% set version = "0.19.0" %}
+{% set version = "21.6.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dask-cuda-{{ version }}.tar.gz
-  sha256: 891a142ed001ec8ab2f5775fc7bd1e992c226273078bdddebad8a1111562b92f
+  sha256: aec52d666f96e0e0b92cfe798bbe5022f3a498cfa95b4c49bce471575f765941
 
 build:
   number: 0
