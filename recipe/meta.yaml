@@ -11,7 +11,7 @@ source:
   sha256: aec52d666f96e0e0b92cfe798bbe5022f3a498cfa95b4c49bce471575f765941
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -19,15 +19,16 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python }}
     - pip
   run:
-    - python >=3.7
-    - dask >=2.22.0,<=2021.5.1
-    - distributed >=2.22.0,<=2021.5.1
-    - numba >=0.53.1
-    - numpy >=1.16.0
-    - pynvml >=8.0.3
+    - python {{ python }}
+    - dask {{ dask }}
+    - distributed {{ distributed }}
+    - numba  {{ numba }}
+    - numpy  {{ numpy }}
+    - pynvml {{ pynvml }}
+    - click {{ click }}
 
 test:
   imports:
@@ -47,5 +48,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - ocefpaf
-    - jakirkham
+    - open-ce/open-ce-dev-team
