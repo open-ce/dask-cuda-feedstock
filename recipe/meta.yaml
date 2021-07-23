@@ -28,6 +28,7 @@ requirements:
     - numba  {{ numba }}
     - numpy  {{ numpy }}
     - pynvml {{ pynvml }}
+    - click {{ click }}
 
 test:
   imports:
